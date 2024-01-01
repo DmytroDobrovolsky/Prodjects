@@ -73,30 +73,48 @@ margin-left: 600px;
   margin-top: 10px;
 }
 #fourteen  {
-  height: 100%;
-  width: 33%;
+  height: 250px;
+  width: 300px;
   float: left;
-  margin-left:
+  margin-left: 40px;
   margin-top: 10px;
+  box-sizing: border-box;
 }
 #twelve {
-  height: 60%;
-  width: 33%;
+  height: 250px;
+  width: 270px;
   float: right;
-  margin-bottom: 0px;
-margin-right: 0px;
+  margin-top: 10px;
+margin-left: 100px;
+margin-right: 20px;
+box-sizing: border-box;
+
 }
 #thirteen  {
-  height: 60%;
-  width: 33%;
+  height: 250px;
+  width: 300px;
   float: right;
-  margin-bottom: 0px;
-  margin-right: 0px;
+  margin-top: 10px;
+  margin-right: 100px;
+  box-sizing: border-box;
+
 }
 #seven {
   margin-bottom: 100%;
 }
 .feed {
   margin-bottom: 100%;
-  
+
+}
+#fourteen img {
+  height: 250px;
+  width: 250px;
+}
+#twelve img {
+  height: 250px;
+  width: 250px;
+}
+#thirteen img {
+  height: 250px;
+  width: 250px;
 }
