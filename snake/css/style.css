@@ -79,8 +79,16 @@ min-width:300px ;
 
 }
 
+@media (min-width:1201px )
+{.container > div {
+  min-width: 400px;}
+
 @media (max-width:1200px ) /*references 1200png*/ {
-.container  {flex-wrap:wrap; width: 1199px;}
+.container  {flex-wrap:wrap; }
+
+.container > div {
+  min-width: 400px;
+}
 
   .container__element-6 { order: 1}
 
@@ -89,8 +97,13 @@ min-width:300px ;
     .container__element-4 {order: 3 }
 }
 
-@media (max-width: 1050px) /*references 1050png*/ {
-.container  {flex-wrap:wrap; /*width:1050px;*/ }
+@media (max-width: 1199px) /*references 1050png*/ {
+.container  {flex-wrap:wrap; }
+
+.container > div {
+  min-width:300px;
+
+}
 
   .container__element-6 {order: 1;}
 
@@ -100,32 +113,46 @@ min-width:300px ;
 }
 
 @media (max-width: 900px) /*references 900png*/ {
-.container  {flex-wrap: wrap; /*width: 900px;*/ }
+.container  {flex-wrap: wrap;  }
+
+.container > div {
+
 }
 
-@media (max-width: 750px) /*references 750png*/ {
+@media (max-width: 899px) /*references 750png*/ {
 
-.container  {flex-wrap: wrap; width:750px; }
+.container  {flex-wrap: wrap;  }
+
+.container > div {
+  min-width:375px;}
 
 .container__element-6 { order:4; }
+
   .container__element-5 {order:3;  }
+
   .container__element-4 {order:1; }
+
   .container__element-3 {order: 2;}
-  .container__element-2 {}
-  .container__element-1 {}
 }
 
-@media (max-width: 600px) /*references 600png*/ {
+@media (max-width: 749px) /*references 600png*/ {
 
-.container  {flex-wrap: wrap;/*width: 600px;*/}
+.container  {flex-wrap: wrap;}
+
+.container > div { min-width:300px;}
 
 .container__element-6 { order:4;}
+
   .container__element-5 {order:3 ; }
+
   .container__element-4 {order:1 ; }
+
   .container__element-3 {order: 2;}
 }
 
-@media (max-width: 450px) /*references 450png*/ {
+@media (max-width: 599px) /*references 450png*/ {
+.container  {flex-wrap: wrap;}
 
-.container  {flex-wrap: wrap;width: 450px;}
+.container > div {
+
 }
