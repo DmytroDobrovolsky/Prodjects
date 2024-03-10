@@ -80,8 +80,21 @@ min-width:300px ;
 }
 
 @media (min-width:1201px )
-{.container > div {
-  min-width: 400px;}
+{
+.container  {flex-wrap:wrap;}
+
+.container__element-1 { width: 33% ;}
+
+  .container__element-2 {width: 33% ; }
+
+  .container__element-3 {width: 33% ; }
+
+  .container__element-6 { order: 1}
+
+    .container__element-5 {order: 2 }
+
+    .container__element-4 {order: 3 }
+}
 
 @media (max-width:1200px ) /*references 1200png*/ {
 .container  {flex-wrap:wrap; }
@@ -114,10 +127,6 @@ min-width:300px ;
 
 @media (max-width: 900px) /*references 900png*/ {
 .container  {flex-wrap: wrap;  }
-
-.container > div {
-
-}
 
 @media (max-width: 899px) /*references 750png*/ {
 
@@ -152,7 +161,3 @@ min-width:300px ;
 
 @media (max-width: 599px) /*references 450png*/ {
 .container  {flex-wrap: wrap;}
-
-.container > div {
-
-}
