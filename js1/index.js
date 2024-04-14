@@ -32,15 +32,14 @@ console.log('evenNumber',evenNumber); //визначення парності с
 const yourRest = 500 - sum;
 console.log('yourRest',yourRest); //сума решти //
 
-const iphoneTwo = iphone.toFixed(2);
-console.log('iphoneTwo:',iphoneTwo); //округлення суми айфона до двох знаків після коми//
+const averageValue = (iphone + samsung + fly)/3;
+console.log('averageValue:',averageValue); //середнє значеня цін товарів//
 
-const samsungTwo = samsung.toFixed(2);
-console.log('samsungTwo:',samsungTwo); //округлення суми самсунга до двох знаків після коми//
+const floorValue = averageValue.toFixed(2);
+console.log("floorValue:",floorValue); //округлене середнє значеня до сотих//
 
-const flyTwo = fly.toFixed(2);
-console.log('flyTwo:',flyTwo); //округлення суми флай до двох знаків після коми//
+const personalDiscont = Math.random () * 10 + 1;
+console.log("personalDiscont:",personalDiscont);
 
-const allElements = [iphoneTwo,samsungTwo,flyTwo];
-const averageValue = allElements.reduce(flyTwo, samsungTwo, iphoneTwo);
-console.log('averageValue:',averageValue);
+//const sumWithDiscont = sum - 9%;
+//console.log("sumWithDiscont:",sumWithDiscont);
