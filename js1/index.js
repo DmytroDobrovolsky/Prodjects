@@ -39,7 +39,23 @@ const floorValue = averageValue.toFixed(2);
 console.log("floorValue:",floorValue); //округлене середнє значеня до сотих//
 
 const personalDiscont = Math.random () * 10 + 1;
-console.log("personalDiscont:",personalDiscont);
+console.log("personalDiscont:",personalDiscont); //персональна знижка - 9%//
 
-//const sumWithDiscont = sum - 9%;
-//console.log("sumWithDiscont:",sumWithDiscont);
+const discont = 20.688975; //знижка (9%)//
+
+const sumWithDiscont = sum - discont;
+console.log("sumWithDiscont:",sumWithDiscont); //сума до оплати з врахуванням знижки//
+
+const sumWithDiscontFloor = sumWithDiscont.toFixed(2);
+console.log('sumWithDiscontFloor:',sumWithDiscontFloor); //сума до оплати з врахуванням знижки округлена до сотих//
+
+const markUp = floorPrice /2;
+console.log('markUp:',markUp); //націнка//
+
+const discontFloor = discont.toFixed(2);
+console.log('discontFloor:',discontFloor); //округлення числа знижки//
+
+const profit = markUp - discontFloor;
+console.log('profit:',profit); //чистий прибуток//
+
+//Мінімальна ціна:15.678 , максимальна ціна:123.965 , сума товарів:229.8775 , сума округлених товарів:228 , сума товарів округлена до сотень:300 , чи є сума товарів парним числом:так(114) , сума решти при оплаті клієнтом 500 грн:270.1225, середнє значення цін округлене до сотих:76.63 , випадкова знижка:9% ,сума до оплати зі знижкою округлена до сотих:209.19 , чистий прибуток:129.31 .//
