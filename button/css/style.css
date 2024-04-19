@@ -4,45 +4,39 @@ body {
   padding: 0;
 }
 .container {
-  width: 100%;
+  width: 1300px;
   height: 100%;
   flex-wrap: wrap;
 display: flex;
+margin-left: 25px;
 
 }
 
- button {
-width:155px ;
+ .bbb {
+width: 155px;
 height: 155px;
 display: flex;
-flex-grow: 1;
+ flex-grow: 1;
 background: black;
 border: 5px solid white;
-}
 
-button {
 transition: all 1s;
-  background: black;
+
+animation-name: animName;
+animation-duration: 4s;
+animation-iteration-count: 1;
 }
 
-button:hover {
+
+.bbb:hover {
   background: green;
   transition: all 0,5s;
-
 }
 
-button:active {
+.bbb:active {
   transform:rotate(180deg  ) scale(0.5);
   background: red;
   transition: all 1s;
-  
-}
-
-
-button {
-  animation-name: animName;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
 }
 
 @keyframes animName {
