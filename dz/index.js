@@ -24,3 +24,26 @@ console.log("getDrinks:",getDrinks);
 //console.log(getDrinks(0)); it`s: 0;
 //console.log(getDrinks(6)); it`s: 21;
 //console.log(getDrinks(10)); it`s: 55;
+
+//Second Task//
+const N = 99;
+for (let i = 1; i <= N; i+=1){
+  console.log("i",i);
+}
+
+//Third Task//
+const step = 3;
+let guest = 1;
+let drinks = 0;
+
+do{
+
+  guest += step;
+
+  console.log("guest:",guest);
+
+  drinks = drinks + guest;
+
+} while (guest<10)
+
+console.log('drinks:',drinks);
