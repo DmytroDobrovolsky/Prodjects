@@ -8,8 +8,8 @@ numericN = +numericN ;
 
 Number.isInteger(numericM);
 Number.isInteger(numericN);
-console.log(Number.isInteger(numericM));
 console.log(Number.isInteger(numericN));
+console.log(Number.isInteger(numericM));
 
 let miss = confirm("Пропускати парні числа ?");
 console.log(miss);
@@ -20,13 +20,16 @@ let result = 0;
 
 for (let i=numericN; i<=numericM; i++){
 
-if (miss=false){
+if (miss==false){
 
 result += i;
+console.log(result);
 }
 
-  if(i%2==1){
+  else if(i%2==1){
     result+=i;
+    console.log(result);
+
   }
 
 
@@ -35,4 +38,5 @@ result += i;
 return result;
 }
 
-name sum (numericN,numericM);
+const finalRes = sum(numericN,numericM);
+console.log(finalRes);
