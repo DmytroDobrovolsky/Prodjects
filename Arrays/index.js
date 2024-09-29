@@ -36,14 +36,18 @@ function getPair(people) {
 }
 
 let people = [...students];
+
 getPair(people);
 
 const a = getPair(people);
+
 console.log(a);
 
 let couple = [...a];
 
 console.log(couple);
+
+
 
 // Завдання 2
 
@@ -53,8 +57,15 @@ function prodject(themes, couple) {
 
   for (i = 0; i < themes.length; i++) {
 
+    let supportArrays=[];
 
-    tasks.push([themes[i] + "," + couple[i]]);
+
+    supportArrays.push(themes[i]);
+
+    supportArrays.push(couple[i][0]+" "+couple[i][1]);
+   
+
+    tasks.push(supportArrays);
 
     console.log(tasks);
   }
@@ -78,7 +89,13 @@ function list(studentsMarks, students) {
 
   for (i = 0; i < students.length; i++) {
 
-    marksList.push([students[i] + ':' + studentsMarks[i]]);
+    let arraySuport = [];
+
+    arraySuport.push(students[i]+":");
+
+    arraySuport.push(studentsMarks[i]);
+
+   marksList.push(arraySuport);
 
     console.log(marksList);
   }
@@ -92,18 +109,86 @@ const v = [...p];
 
 //Завданя 4
 
-let tasksTeam = [...c];
+function manPerson (male){
 
-console.log(tasksTeam);
+  let maleArrays = [];
+
+  for(person of male){
+
+    if(person[person.length-1] !== "а"){
+
+maleArrays.push(person);
+
+console.log(maleArrays);
+
+
+    }
+
+  }
+  return maleArrays;
+}
+
+let male = [...students];
+
+manPerson (male);
+
+let menTeam = manPerson(male);
+
+console.log(menTeam);
+
+
+let menTeamDublicat = [...menTeam];
+
+function womanPerson(female){
+
+  let femaleArrays = [];
+
+  for(let person of female){
+    if(person[person.length-1] === "а"){
+
+femaleArrays.push(person);
+
+console.log(femaleArrays);
+
+    }
+  }
+  return femaleArrays
+}
+
+let female = [...students];
+
+womanPerson(female);
+
+let womenTeam = womanPerson(female);
+
+console.log(womenTeam);
+
+let womenTeamDublicat = [...womenTeam];
+
+
+let tasks = [...themes];
 
 function randomMarks(M, N) {
 
+
   let coupleMarks = [];
-  let number = [];
+ 
+ 
 
-  for (i = 0; i < tasksTeam.length; i++) {
+  for (i = 0; i <tasks.length; i++) {
 
-    coupleMarks.push([tasksTeam[i] + '-' + [Math.floor(Math.random() * (N - M) + M)]]);
+    let numberForTeam = [];
+
+    numberForTeam.push(womenTeamDublicat[i]+ " "+ menTeamDublicat[i]);
+
+    //numberForTeam.push(menTeamDublicat[i]);
+
+    numberForTeam.push(tasks[i]);
+
+
+    numberForTeam.push(Math.floor(Math.random() * (N - M) + M));
+
+    coupleMarks.push(numberForTeam);
 
     console.log(coupleMarks);
 
