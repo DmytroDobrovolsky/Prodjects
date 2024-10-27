@@ -23,26 +23,26 @@ getRandomArray(10, 1, 50);
 
 // завдання 3
 
-function getAverage(numbersBox){
+function getAverage(numbersTeam){
 
     let sum = 0;
 
-    for(let i = 0; i<=numbersBox.length;i++){        
+    for(let i = 0; i<=numbersTeam.length;i++){        
 
         sum += i;
-        console.log("sum",sum);
+        
 
     }
-    let average = sum / numbersBox.length;
+    let average = sum / numbersTeam.length;
     
     console.log("task 3 :",average);
 
     return average;
 }
 
- const numbersBox = [10, 10, 10, 10, 10];
+ const numbersTeam = [10, 10, 10, 10, 10];
 
-getAverage(numbersBox);
+getAverage(numbersTeam);
 
 
 
@@ -58,6 +58,7 @@ function filterEvenNumbers(numbersArray){
     for (let i = 0; i<=numbersArray.length;i++){
 
         if(i%2==1){
+
 
         oddNumbers.push(i);
 
@@ -84,7 +85,7 @@ let result = 0;
 
         if(numbersBlock[i]>0){
 
-            console.log(i);
+          
             
             result += 1;
 
@@ -106,7 +107,7 @@ function getDividedByFive(blockOfNumbers){
 
 let getNumbers = blockOfNumbers.filter(number=> number%5 === 0);
 
-console.log('task 7',getNumbers);
+console.log('task 7:',getNumbers);
 
 return getNumbers;
 
@@ -138,4 +139,4 @@ const str = "Are you fucking kidding?";
 
 const res = replaceBadWords(str);
 
-console.log(res);
+console.log("task 8:",res);
