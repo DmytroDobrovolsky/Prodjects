@@ -12,7 +12,24 @@ let min = number[0];
 
  getMaxDigit([1,3,1,5]);
 
- //2 Завдання не знаю
+ //Завдання 2 
+
+ const getPow = (a,pow)=>{
+
+  let res = 1;
+
+  for (let p =1; p<=pow; p++){
+
+    res *=a;
+
+  }
+return res;
+ }
+
+ const res = getPow (2,2);
+
+console.log("getPow",res);
+
 
 //3 завдання :
 
@@ -142,7 +159,7 @@ else {
 let sum ="100$";
 convertCurrency (sum);
 
-//Завдання 9 потребує пояснення (консоль в return)
+//Завдання 9 
 
 
 function generatePassword(length) {
