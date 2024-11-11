@@ -297,9 +297,39 @@ const getBestStudent = (students) =>{
     
   });
 
-return bestStudentOfAll;
+  const result = bestStudentOfAll[0];
+
+return result ;
 }
 
 const topStudent =  getBestStudent  (students);
 
 console.log(topStudent);
+
+// task 6 знайшов рішення , треба пояснити 
+
+function calculateWordLetters(str) {
+
+  let letterCounts = {};
+
+  for (let char of str) {
+
+    if (letterCounts[char]) {
+
+      letterCounts[char]++;
+
+    } 
+    
+    else {
+      letterCounts[char] = 1;
+    }
+
+  }
+  return letterCounts;
+}
+
+let myString = "тест";
+
+let result = calculateWordLetters(myString);
+
+console.log(result);

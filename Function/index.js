@@ -222,3 +222,7 @@ function unicElements(string){
 
 let string = "regenerethion";
  unicElements(string);
+
+
+
+ 
