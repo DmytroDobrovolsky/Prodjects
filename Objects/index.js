@@ -1,3 +1,5 @@
+'use strict'
+
 const students = [{
   name: "Tanya",
   course: 3,
@@ -26,47 +28,43 @@ const students = [{
   }
 }];
 
-// Task 1 (як написати код, так аби саббжекс, який складається  з двох слів писав першу літеру в обох словах з великої букви)
+// Task 1 
 
- const getSubjects = (students) => {
+const getSubjects = (students) => {
 
-const studentKeys = Object.keys (students.subjects);
+  const studentKeys = Object.keys(students.subjects);
 
-const upperArray = [];
+  const upperArray = [];
 
-const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-studentKeys.forEach(string => {
+  studentKeys.forEach(string => {
 
-if(alphabet.includes(string[0])){
+    upperArray.push(string.charAt(0).toUpperCase() + string.slice(1));
 
-  upperArray.push(string.charAt(0).toUpperCase() + string.slice(1));
-}  
+  });
 
-});
+  const replaceArray = [];
 
-const replaceArray = [];
+  upperArray.forEach(string => {
 
-upperArray.forEach(string => {
+    if (string.includes("_")) {
 
-if(string.includes("_")){
+      replaceArray.push(string.replace("_", " "));
 
-replaceArray.push(string.replace("_", " "));
-
-}
-    else{
+    }
+    else {
 
       replaceArray.push(string);
     }
-});
+  });
 
-return replaceArray;
-
-
- };
+  return replaceArray;
 
 
-const studentsSubjects = getSubjects (students[0]);
+};
+
+
+const studentsSubjects = getSubjects(students[0]);
 
 console.log(studentsSubjects);
 
@@ -74,10 +72,7 @@ console.log(studentsSubjects);
 
 const getAverageMark = (students) => {
 
-
   const subjKeys = Object.keys(students.subjects);
-
-
 
   const marksArray = [];
 
@@ -87,7 +82,7 @@ const getAverageMark = (students) => {
 
   });
 
-  
+
 
   let sum = 0;
 
@@ -110,7 +105,7 @@ console.log(studentAverageMark);
 
 // Task 3
 
-const  getStudentInfo = (students) => {
+const getStudentInfo = (students) => {
 
   const infoObject = {};
 
@@ -120,193 +115,89 @@ const  getStudentInfo = (students) => {
 
   const subjKeys = Object.keys(students.subjects);
 
-  const marksArray = [];
-
-  subjKeys.forEach(key => {
-
-    marksArray.push(...students.subjects[key]);
-
-  });
-
-  
-
-  let sum = 0;
-
-  marksArray.forEach(mark => {
-
-    sum += mark;
-
-
-  });
-
- let result = (sum / marksArray.length).toFixed(2);
+  const result = getAverageMark(students);
 
   infoObject.averageMark = + result;
 
-  console.log(infoObject);
+  return infoObject;
 
 }
 
-
 const personalInfo = getStudentInfo(students[0]);
 
-// Task 4 (пояснити чому студенті має бути в лапках фор іч , бо обджектс не підійшло)
+console.log(personalInfo);
+
+
+// Task 4
 
 
 const getStudentsNames = (students) => {
 
-const personalName = [];
+  const personalName = [];
 
-students.forEach(students => {
+  students.forEach(students => {
 
-personalName.push(students.name)
-});
+    personalName.push(students.name)
+  });
 
 
 
-personalName.sort();
+  personalName.sort();
 
-return personalName;
+  return personalName;
 
 }
 
-const sortedName = getStudentsNames (students) ;
+const sortedName = getStudentsNames(students);
 
 console.log(sortedName);
 
 // Task 5 
 
-const getBestStudent = (students) =>{
+const getBestStudent = (students) => {
 
-  const allAverageMark = [];
+  const allAverageMark = {};
 
-  const subjKeysOne = Object.keys(students[0].subjects);  
+  students.forEach((student) => {
 
-  const marksArrayOne = [];
+    const result = getAverageMark(student);
 
-  subjKeysOne.forEach(key => {
-
-    marksArrayOne.push(...students[0].subjects[key]);
+    allAverageMark[student.name] = +result
 
   });
 
-  
+  const values = Object.values(allAverageMark);
 
-  let sumOne = 0;
-
-  marksArrayOne.forEach(mark => {
-
-    sumOne += mark;
-
-
-  });
-
-  let resultOne = (sumOne / marksArrayOne.length).toFixed(2);
-
-  allAverageMark.push(+resultOne);
-
-  console.log(resultOne);
-
-  
-  
-  const subjKeysTwo = Object.keys(students[1].subjects);  
-
-  const marksArrayTwo = [];
-
-  subjKeysTwo.forEach(key => {
-
-    marksArrayTwo.push(...students[1].subjects[key]);
-
-  });
-
-  
-
-  let sumTwo = 0;
-
-  marksArrayTwo.forEach(mark => {
-
-    sumTwo += mark;
-
-
-  });
-
-  let resultTwo = (sumTwo / marksArrayTwo.length).toFixed(2);
-
-  allAverageMark.push(+resultTwo);
-
-
-  console.log(resultTwo);
-  
-
-  
-  const subjKeysThree = Object.keys(students[2].subjects);  
-
-  const marksArrayThree = [];
-
-  subjKeysThree.forEach(key => {
-
-    marksArrayThree.push(...students[2].subjects[key]);
-
-  });
-
-  
-
-  let sumThree = 0;
-
-  marksArrayThree.forEach(mark => {
-
-    sumThree += mark;
-
-
-  });
-
-  let resultThree = (sumThree / marksArrayThree.length).toFixed(2);
-
-  allAverageMark.push(+resultThree);
-
-
-  console.log(resultThree);
-
-  console.log(allAverageMark);
-
+  const maxMark = Math.max(...values);
 
   const bestStudentOfAll = [];
 
- allAverageMark.forEach(mark => {
+  let result = 0;
 
-  if(allAverageMark[0]>allAverageMark[1]&&allAverageMark[0]>allAverageMark[2]){
+  Object.entries(allAverageMark).forEach(mark => {
 
-    bestStudentOfAll.push("Tanya");
-    
-  }
+    bestStudentOfAll.push(mark);
 
-  if(allAverageMark[1]>allAverageMark[0]&&allAverageMark[1]>allAverageMark[2]){
+    if (mark[1]===maxMark){
 
-    bestStudentOfAll.push("Victor");
+      result = mark[0];
+
+      return mark[0];
 
 
-  }
+    }
 
-  else{
-
-    
-   bestStudentOfAll.push("Anton");
-    
-
-  }
-    
   });
 
-  const result = bestStudentOfAll[0];
+return result;
 
-return result ;
 }
 
-const topStudent =  getBestStudent  (students);
+const topStudent = getBestStudent(students);
 
 console.log(topStudent);
 
-// task 6 знайшов рішення , треба пояснити 
+// task 6 
 
 function calculateWordLetters(str) {
 
@@ -318,8 +209,8 @@ function calculateWordLetters(str) {
 
       letterCounts[char]++;
 
-    } 
-    
+    }
+
     else {
       letterCounts[char] = 1;
     }
