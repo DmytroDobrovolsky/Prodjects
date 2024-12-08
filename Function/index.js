@@ -5,20 +5,25 @@ let min = number[0];
   for(const num of number){
     if(num>min){
       min= num;
-      console.log("MaxDigit",min);
     }
 }
+
+return min;
 }
 
- getMaxDigit([1,3,1,5]);
+ const maxDigit = getMaxDigit([1,3,1,5]);
+
+ console.log('maxDigit',maxDigit);
+ 
+
 
  //Завдання 2 
 
  const getPow = (a,pow)=>{
 
-  let res = 1;
+  let res = a;
 
-  for (let p =1; p<=pow; p++){
+  for (let p =1; p<pow; p++){
 
     res *=a;
 
@@ -26,7 +31,7 @@ let min = number[0];
 return res;
  }
 
- const res = getPow (2,2);
+ const res = getPow (3,4);
 
 console.log("getPow",res);
 
@@ -189,39 +194,65 @@ console.log(name.replaceAll("a",""));
 const name = "Taras";
 deleteLetter (name);
 
-// Завдання 11 (не вийшло)
+// Завдання 11 
 
 function revers(palindrom) {
 
-if(palindrom.revers == palindrom){
+ let reversedWord = "";
 
-  console.log(true);
+let result = 0;
+
+  for(let i = palindrom.length-1; i>=0; i--) {
+
+    reversedWord+=palindrom[i];
+
+if(reversedWord == palindrom && i == 0){
+
+  result = true;
+  
 }
-  else {
+  else if(reversedWord !== palindrom && i == 0) {
 
 
-    console.log(false);
+    result = false;
   }
 }
 
+return result;
 
-let palindrom = 'anna';
+}
 
-revers(palindrom);
+const resultRevers= revers('anna');
+
+console.log('resultRevers:',resultRevers);
+
 
 // Завдання 12 (не вийшло)
 
 function unicElements(string){
 
-  let result = new Set(string);
 
-  return result;
+  let letter = new Set(string);
+
+  let res = "";
+
+letter.forEach(value => {
+
+  res+=value;
+  
+});
+
+  return res;
 
 }
 
 
-let string = "regenerethion";
- unicElements(string);
+let string = "regenerethionnnnn";
+
+ const unElem = unicElements(string);
+
+ console.log(unElem);
+ 
 
 
 
