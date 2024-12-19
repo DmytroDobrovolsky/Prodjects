@@ -22,6 +22,19 @@ set marksArray (array){
 
 }
 
+set studentMark (mark){
+
+    this.mark = mark ;
+
+}
+
+get addMark (){
+
+     this.array.push(this.mark);
+
+     return this.array;
+}
+
 
 getInfo(){
 
@@ -29,6 +42,24 @@ getInfo(){
 
     return res;
 }
+
+/*getAverageMark(addMark){
+
+let support = 0;
+
+for (let i = 0; i<addMark.length;i++){
+
+    support += i;
+
+}
+
+const averMark = this.array/support;
+
+return averMark;
+
+} */
+
+
 
 }
 
@@ -38,5 +69,11 @@ console.log(firstStudent.getInfo());
 
 firstStudent.marksArray = [5, 4, 4, 5];
 
-console.log(firstStudent.marksArray);
+firstStudent.mark = 5;
+
+console.log(firstStudent.addMark);
+
+console.log(firstStudent.getAverageMark());
+
+
 
