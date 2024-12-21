@@ -16,7 +16,7 @@ class  student {
         
     }
 
-set marksArray (array){
+ set marksArray (array){
 
     this.array = array ;
 
@@ -43,25 +43,65 @@ getInfo(){
     return res;
 }
 
-/*getAverageMark(addMark){
+getAverageMark(){
 
 let support = 0;
 
-for (let i = 0; i<addMark.length;i++){
+for (let i = 0; i<this.array.length;i++){
 
-    support += i;
+    support += this.array[i];
 
 }
 
-const averMark = this.array/support;
+const averMark = support/this.array.length;
 
 return averMark;
 
-} */
+} 
 
+dismiss(){
 
+this.offStudent = true;
+
+if (this.offStudent = true) {
+
+    this.array = 0;
+    this.mark = 0;
+    
 
 }
+return this.array;
+}
+set newMarksArray (newArray){
+
+    this.newArray = newArray ;
+
+}
+
+set newStudentMark (newMark){
+
+    this.newMark = newMark ;
+
+}
+
+recover(){
+
+this.offStudent = false;
+
+if (this.offStudent=false) {
+
+ this.newArray = [5, 4, 4, 5];
+
+this.newMark = 5;
+    
+this.newArray.push(newMark);
+}
+
+return this.newArray ;
+}
+
+}
+
 
 const firstStudent = new student("Вищої Школи Психотерапії м.Одеса","Студент 1 курсу","Остап Родоманський Бендер");
 
@@ -74,6 +114,17 @@ firstStudent.mark = 5;
 console.log(firstStudent.addMark);
 
 console.log(firstStudent.getAverageMark());
+
+console.log(firstStudent.dismiss());
+
+console.log(firstStudent.recover());
+
+firstStudent.offStudent = 0;
+
+firstStudent.newArray = 0;
+
+firstStudent.newMark = 0;
+
 
 
 
