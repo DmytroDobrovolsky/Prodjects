@@ -1,129 +1,106 @@
-class  student {
-
+class student {
     university = "DVB";
-
-    course = "Студент 1 курсу";
-
+    course = 1;
     fullName = "Ostap Gnatyk";
+    studentArray = [];
 
-    constructor(university,course,fullName) {
-
+    constructor(university, course, fullName) {
         this.university = university;
 
         this.course = course;
 
         this.fullName = fullName;
-        
     }
 
- set marksArray (array){
+    set setStudentMark(mark) {
 
-    this.array = array ;
+        Array.isArray(mark);
 
+        if (this.offStudent === false) {
+
+            if (Array.isArray(mark) === true) {
+                this.studentArray.push(...mark);
+            }
+
+            if (Array.isArray(mark) === false) {
+                this.studentArray.push(mark);
+            }
+            return this.studentArray;
+        }
+
+        else {
+            return null;
+        }
+    }
+
+    get getRetArr() {
+
+        if (this.offStudent === false) {
+
+            return this.studentArray;
+
+        }
+
+        else {
+
+            return null;
+        }
+
+    }
+
+    getInfo() {
+        const res = "Студент" + this.course + "курсу" + " " + this.university + "," + this.fullName;
+
+        return res;
+    }
+
+    getAverageMark() {
+        let support = 0;
+
+        for (let i = 0; i < this.studentArray.length; i++) {
+            support += this.studentArray[i];
+        }
+
+        if (this.studentArray.length === 0) return "No marks";
+
+        const averMark = support / this.studentArray.length;
+
+        return averMark;
+    }
+
+    dismiss() {
+
+        this.offStudent = true;
+
+    }
+
+    recover() {
+
+        this.offStudent = false;
+
+    }
 }
 
-set studentMark (mark){
-
-    this.mark = mark ;
-
-}
-
-get addMark (){
-
-     this.array.push(this.mark);
-
-     return this.array;
-}
-
-
-getInfo(){
-
-    const res = this.course+" " + this.university + "," + this.fullName;    
-
-    return res;
-}
-
-getAverageMark(){
-
-let support = 0;
-
-for (let i = 0; i<this.array.length;i++){
-
-    support += this.array[i];
-
-}
-
-const averMark = support/this.array.length;
-
-return averMark;
-
-} 
-
-dismiss(){
-
-this.offStudent = true;
-
-if (this.offStudent = true) {
-
-    this.array = 0;
-    this.mark = 0;
-    
-
-}
-return this.array;
-}
-set newMarksArray (newArray){
-
-    this.newArray = newArray ;
-
-}
-
-set newStudentMark (newMark){
-
-    this.newMark = newMark ;
-
-}
-
-recover(){
-
-this.offStudent = false;
-
-if (this.offStudent=false) {
-
- this.newArray = [5, 4, 4, 5];
-
-this.newMark = 5;
-    
-this.newArray.push(newMark);
-}
-
-return this.newArray ;
-}
-
-}
-
-
-const firstStudent = new student("Вищої Школи Психотерапії м.Одеса","Студент 1 курсу","Остап Родоманський Бендер");
+const firstStudent = new student(
+    "Вищої Школи Психотерапії м.Одеса",
+    " 1 ",
+    "Остап Родоманський Бендер"
+);
 
 console.log(firstStudent.getInfo());
 
-firstStudent.marksArray = [5, 4, 4, 5];
+firstStudent.setStudentMark = [6, 7, 8, 9];
 
-firstStudent.mark = 5;
+firstStudent.setStudentMark = 5;
 
-console.log(firstStudent.addMark);
 
 console.log(firstStudent.getAverageMark());
 
+console.log(firstStudent.studentArray);
+
 console.log(firstStudent.dismiss());
 
-console.log(firstStudent.recover());
-
-firstStudent.offStudent = 0;
-
-firstStudent.newArray = 0;
-
-firstStudent.newMark = 0;
+console.log(firstStudent);
 
 
 
