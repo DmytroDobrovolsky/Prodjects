@@ -2,7 +2,10 @@ class student {
     university = "DVB";
     course = 1;
     fullName = "Ostap Gnatyk";
+
     studentArray = [];
+
+    offStudent = false;
 
     constructor(university, course, fullName) {
         this.university = university;
@@ -70,7 +73,7 @@ class student {
 
     dismiss() {
 
-        this.offStudent = true;
+        this.offStudent = false;
 
     }
 
@@ -79,7 +82,41 @@ class student {
         this.offStudent = false;
 
     }
+
+
 }
+
+class BudgetStudent extends student {
+    constructor(university, course, fullName) {
+
+      super(university, course, fullName); 
+
+   this.intervalId = setInterval(() => this.getScholarship(), 30000);
+
+
+    }
+
+
+    getScholarship(){
+
+console.log();
+
+
+        if(this.getAverageMark() >= 4 && this.offStudent === false){
+
+         console.log( "Ви отримали 1400 грн. стипендії");
+        
+        }
+
+        else {
+
+            return;
+
+        }
+    }
+
+}
+
 
 const firstStudent = new student(
     "Вищої Школи Психотерапії м.Одеса",
@@ -87,20 +124,26 @@ const firstStudent = new student(
     "Остап Родоманський Бендер"
 );
 
+const secondStudent = new BudgetStudent( "Вищої Школи Психотерапії м.Одеса",
+    " 1 ",
+    "Остап Родоманський Бендер");
+
+firstStudent.setStudentMark = [4,4,4];
+
+firstStudent.setStudentMark = 4;
+
+secondStudent.setStudentMark = [4,4,4];
+
+secondStudent.setStudentMark = 4;
+
 console.log(firstStudent.getInfo());
-
-firstStudent.setStudentMark = [6, 7, 8, 9];
-
-firstStudent.setStudentMark = 5;
-
 
 console.log(firstStudent.getAverageMark());
 
-console.log(firstStudent.studentArray);
+console.log();
 
-console.log(firstStudent.dismiss());
 
-console.log(firstStudent);
+
 
 
 
