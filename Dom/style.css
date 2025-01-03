@@ -1,0 +1,15 @@
+body{
+
+margin: 0;
+padding: 0;
+
+}
+
+.mainButton{
+
+    height: 855px;
+    width: 855px;
+    color: aqua;
+    background-color: black;
+    padding: 20px;
+}
