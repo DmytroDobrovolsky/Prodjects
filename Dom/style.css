@@ -7,9 +7,25 @@ padding: 0;
 
 .mainButton{
 
-    height: 855px;
-    width: 855px;
+    height: 55px;
+    width: 55px;
     color: aqua;
-    background-color: black;
+    background-color: rgba(172, 122, 56, 0.666);
     padding: 20px;
+    display:flex;
+    
+}
+
+.mainContainer{
+
+    width: 275px;
+    align-items: center ;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: 35% ;
+  margin-top: 25% ;
+
+
+
 }
