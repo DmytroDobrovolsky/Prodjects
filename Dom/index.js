@@ -272,6 +272,33 @@ function setRandomColor(array) {
 const setRanCol =  setRandomColor(buttonArray);
 
 
+function generateBlocksInterval(array) {
+console.log(array);
+
+    for (let i = 0; i < array.length; i++) {
+
+        
+
+        array[i].style.backgroundColor = getRandomColor();
+
+        
+    }
 }
+
+const genBlkIntr =  generateBlocksInterval(buttonArray);
+
+
+const intervalId = setInterval(() => generateBlocksInterval(buttonArray), 1000);
+
+
+const handlerClick = () => {
+
+
+    
+}
+
+
+}
+
 
 const gnrtBlc = generateBlocks ();
