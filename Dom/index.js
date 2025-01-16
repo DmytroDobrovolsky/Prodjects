@@ -6,7 +6,11 @@ const commonClassName = {
 
 mainBtn: "mainButton",
 
+mainBtnClc: "mainButtonClick",
+
 mainCont: "mainContainer",
+
+
 
 };
 
@@ -291,12 +295,34 @@ const genBlkIntr =  generateBlocksInterval(buttonArray);
 const intervalId = setInterval(() => generateBlocksInterval(buttonArray), 1000);
 
 
-const handlerClick = () => {
+const handlerClick = (buttonArray) => {
+
+    for (let i = 0; i < buttonArray.length; i++) {
+
+        
+
+        buttonArray[i].classList.toggle("mainButtonClick");
 
 
+    }
     
+  
 }
 
+const handClick = handlerClick (buttonArray);
+
+const personalClick = (buttonArray) => {
+
+    for (let i = 0; i < buttonArray.length; i++) {
+
+        
+        buttonArray[i].onclick = handlerClick;
+
+    }
+
+}
+
+const prsnlClck = personalClick (buttonArray);
 
 }
 
