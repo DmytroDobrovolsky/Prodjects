@@ -1,14 +1,14 @@
 //Завдання 1 (console)
 function getMaxDigit(number) {
-let min = number[0];
+let max = number[0];
 
   for(const num of number){
-    if(num>min){
-      min= num;
+    if(num>max){
+      max= num;
     }
 }
 
-return min;
+return max;
 }
 
  const maxDigit = getMaxDigit([1,3,1,5]);
@@ -67,7 +67,7 @@ money ( 19, 1000);
 
 function getRandomNumber (N, M){
 
-let number = Math.floor(Math.random() * 11);
+let number = Math.floor(Math.random() * (N+M));
 
 console.log("number", number);
 }
@@ -186,13 +186,15 @@ console.log(generatePassword(8));
 
 //Завдання 10
 
-function deleteLetter (name){
+function deleteLetter (letter){
 
-console.log(name.replaceAll("a",""));
+  const name = "Taras";
+
+console.log(name.replaceAll(letter,""));
 }
 
-const name = "Taras";
-deleteLetter (name);
+const letter = "a";
+deleteLetter (letter);
 
 // Завдання 11 
 
@@ -227,27 +229,27 @@ const resultRevers= revers('anna');
 console.log('resultRevers:',resultRevers);
 
 
-// Завдання 12 (не вийшло)
+// Завдання 12 
 
 function unicElements(string){
 
+  let array = [];
 
-  let letter = new Set(string);
+  for (let i = 0; i < string.length; i++) {
 
-  let res = "";
-
-letter.forEach(value => {
-
-  res+=value;
-  
-});
-
-  return res;
-
+    if (string.indexOf(string[i]) == string.lastIndexOf(string[i])) {
+        
+      array.push(string[i]);
+    }
 }
 
+let rslt = array.join("");
 
-let string = "regenerethionnnnn";
+return rslt;    
+
+
+}
+let string = "uhhhhdddddntm";
 
  const unElem = unicElements(string);
 
