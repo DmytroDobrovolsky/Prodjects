@@ -20,6 +20,51 @@ const getRandArr = getRandomArray(10, 1, 50);
 
 console.log("task 1:",getRandArr);
 
+
+//Завдання 2 треба, аби Тарас пояснив !!!!
+
+const mode = (arry) => {
+
+    const mode = {};
+
+    let max = 0, count = 0;
+  
+    for(let i = 0; i < arry.length; i++) {
+
+      const item = arry[i];
+      
+      if(mode[item]) {
+
+        mode[item]++;
+
+      }
+      
+      else {
+
+        mode[item] = 1;
+
+    }
+      
+      if(count < mode[item]) {
+
+        max = item;
+
+        count = mode[item];
+
+      }
+    }
+     
+    return max;
+
+  };
+
+  const arry = [2, 1, 3, 2, 2];
+
+ const getModa =  mode (arry);
+
+ console.log("task 2:",getModa);
+ 
+
 // Завдання 3
 
 function getAverage(numbersTeam){
@@ -42,6 +87,54 @@ function getAverage(numbersTeam){
 const getAver = getAverage(numbersTeam);
 
 console.log('task 3:',getAver);
+
+//Завдання 4
+
+const mediana = (array) => {
+
+    let sup = 0;
+    
+    array.sort(function(a, b){return a - b});
+    
+    arrayLength = array.length % 2 ;
+        
+    if(arrayLength === 1){
+    
+    array.forEach((item, i) => {
+    
+      sup += array[i];
+    
+    });
+}
+
+
+else{
+
+        
+    let getMedItems = (array[array.length / 2 - 1] + array[array.length / 2]) / 2 ;   
+
+    console.log(getMedItems);
+    
+
+    return getMedItems ;
+
+    
+
+        
+}
+
+const result = sup / array.length;    
+
+    
+    return result;
+    
+    }
+    
+    let arr = [5,7,9,10,8,5,9];
+    
+    const startMd = mediana (arr);
+
+console.log("task 4:",startMd);
 
 
 //Завдання 5
