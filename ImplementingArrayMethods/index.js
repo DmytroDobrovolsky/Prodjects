@@ -1,9 +1,5 @@
 //Task 1 
 
-let pushArray = ['cow', 'dog','cat','rat','monkey']; 
-
-
-
 const _push =  (arr,...arguments) => {
 
 
@@ -24,27 +20,25 @@ for (let i = 0; i<arguments.length; i++){
 
 }
 
+arr =newArray ;
 
-
- return newArray;
+ return arr;
 
 }
 
+let pushArray = ['cow', 'dog','cat','rat','monkey']; 
+
 const pushMethod = _push(pushArray, 'bird','mouse');
 
-console.log(pushMethod);
+console.log("task1:",pushMethod);
 
 
 //Task 2
-
-let joinArray = ['cow', 'dog','cat','rat','monkey']; 
 
 
 const _join =  (arr) => {
 
     let string = "";
-
-const newArray = [];
 
     for(let ar of arr){
 
@@ -55,49 +49,54 @@ const newArray = [];
 
     }
 
-    newArray[newArray.length]=string;
 
-joinArray = newArray;
 
-return joinArray;
+return string;
 }
+
+let joinArray = ['cow', 'dog','cat','rat','monkey']; 
+
 
 const joinMethod = _join(joinArray);
 
-console.log(joinMethod);
+console.log("task2:",joinMethod);
 
 //Task 3
 
 let popArray = ['cow', 'dog','cat','rat','monkey']; 
 
-let newSupportArray = [];
 
 const _pop =  (arr) => {
 
-    for (let i = 0; i < popArray.length - 1; i++) {
+    let newSupportArray = [];
 
-        newSupportArray[newSupportArray.length]=popArray[i];
+    let popElement = arr[arr.length - 1];
+
+    for (let i = 0; i < arr.length - 1; i++) {
+
+        newSupportArray[newSupportArray.length]=arr[i];
 
 
     }
 
-    popArray = newSupportArray;
+    arr = newSupportArray;
 
-    return popArray;
+    return popElement;
 }
-
 const popMethod = _pop(popArray);
 
-console.log(popMethod);
+console.log("task3:",popMethod);
 
 //Task 4
 
 let unshiftArray = ['cow', 'dog','cat','rat','monkey']; 
 
-let arraySupport = [];
 
 
 const _unshift =  (arr,...elements) => {
+
+    let arraySupport = [];
+
 
 for (let i  = 0; i  < elements.length; i ++) {
 
@@ -112,62 +111,64 @@ for (let i = 0; i < arr.length; i++) {
 
 }
 
-unshiftArray = arraySupport;
+arr = arraySupport;
 
-return unshiftArray;
+return arr;
 
 }
 
 const unshiftMethod = _unshift(unshiftArray,'mouse','frog');
 
-console.log(unshiftMethod);
+console.log("task4:",unshiftMethod);
 
 //Task 5
 
-let shiftArray = ['cow', 'dog','cat','rat','monkey']; 
-
-const startIndex = 1;
-
-let supArr = [];
+let shiftArray= ['dog','cat','rat','monkey']; 
 
 const _shift =  (arr) => {
 
-for (let i = startIndex; i <shiftArray.length; i++){
+ const startIndex = 1;
 
-    supArr[supArr.length]=shiftArray[i];
+ const shiftElem = arr[0];
+
+let supArr = [];
+
+for (let i = startIndex; i <arr.length; i++){
+
+    supArr[supArr.length]=arr[i];
 
 }
 
-shiftArray = supArr;
+arr = supArr;
 
-return shiftArray;
+return shiftElem;
 
 }
 
 
 const shiftMethod = _shift(shiftArray);
 
-console.log(shiftMethod);
+console.log("task5:",shiftMethod);
 
 //Task 6 
 
 let indexOfArray = ['cow', 'dog','cat','rat','monkey']; 
 
-let indexNumber = 0;
-
-const word = 'monkey';
+const word = 'cow';
 
 const _indexOf =  (arr,element) => {
 
-for (let i = 0; i<indexOfArray.length;i++){
+let indexNumber = 0;
+
+for (let i = 0; i<arr.length;i++){
 
     indexNumber += 1;
 
-if (indexOfArray[i]==word){
+if (arr[i]==word){
 
     return indexNumber;
 }
-else if(indexOfArray[i]!==word && indexNumber == indexOfArray.length){
+else if(arr[i]!==word && indexNumber == arr.length){
 
 indexNumber = -1;
 
@@ -182,31 +183,31 @@ return indexNumber;
 
 const _indexOfMethod = _indexOf(indexOfArray,word);
 
-console.log(_indexOfMethod);
+console.log("task6:",_indexOfMethod);
 
 //Task 7
 
 let includesArray = ['cow', 'dog','cat','rat','monkey']; 
 
-let includesResult = 0;
-
-let includesNumber = 0;
-
 const elem = 'monkey';
 
 const _includes =  (arr,element) => {
 
-for (let i = 0; i<includesArray.length;i++){
+let includesResult = 0;
+
+let includesNumber = 0;
+
+for (let i = 0; i<arr.length;i++){
 
     includesNumber += 1;
 
-if (includesArray[i]==elem){
+if (arr[i]==elem){
 
     includesResult = true;
 
     return includesResult;
 }
-else if(includesArray[i]!==elem && includesNumber == includesArray.length){
+else if(arr[i]!==elem && includesNumber == arr.length){
 
 includesResult = false;
 
@@ -221,43 +222,44 @@ return includesResult;
 
 const _includesMethod = _includes(includesArray,elem);
 
-console.log(_includesMethod);
+console.log("task7:",_includesMethod);
 
 //Task 8
 
 let reverseArray = ['cow', 'dog','cat','rat','monkey']; 
 
-let supportArr = [];
-
 const _reverse =  (arr) => {
+
+    let supportArr = [];
 
     for(let i = arr.length - 1; i >= 0; i--){
 
-        supportArr[supportArr.length]=reverseArray[i];      
+        supportArr[supportArr.length]=arr[i];      
     }
 
-reverseArray = supportArr;
+arr = supportArr;
 
-return reverseArray;
+return arr;
 
 }
 
 
 const _reverseMethod = _reverse(reverseArray);
 
-console.log(_reverseMethod);
+console.log("task8:",_reverseMethod);
 
 //Task 9
 
 let sliceArray = ['cow', 'dog','cat','rat','monkey']; 
 
-let resSliceArr = [];
-
 const _slice =  (arr,elemStart,elemEnd) => {
+
+    let resSliceArr = [];
+
 
     for (let i = elemStart;i<=elemEnd;i++ ){
 
-resSliceArr[resSliceArr.length]=sliceArray[i];      
+resSliceArr[resSliceArr.length]=arr[i];      
 
     }
 
@@ -271,27 +273,38 @@ console.log(_sliceMethod);
 
 //Task 10
 
- const words = "I love you so much honey" ;
+ const wordsArr = [ "I", "love", "you", "so", "much", "honey"] ;
 
- let supportNumber = 0;
+ const _lastIndexOf =  (arr,elem) => {
 
- const _lastIndexOf =  (str,elem) => {
+    let supportNumber = 0;
 
-for(let i = str.length - 1; i >= 0; i--){
+    let undef = -1 ;
+
+for(let i = arr.length - 1; i >= 0; i--){
 
     supportNumber+=1;
 
-    if(str[i]==elem){
 
-        return words.length - supportNumber;
+    if(arr[i] == elem){
+
+        
+
+        return arr.length - supportNumber;
     }
-}
+
+    else if (arr[i] !== elem && i == 0) {
+
+return undef;
+
+    }
+ }
 
  }
 
-const _lastIndexOfMethod = _lastIndexOf(words,"o");
+const _lastIndexOfMethod = _lastIndexOf(wordsArr,"love");
 
-console.log(_lastIndexOfMethod);
+console.log("task9:",_lastIndexOfMethod);
 
 
 
