@@ -70,7 +70,6 @@ buttons.forEach((btn) => {
 }
 
 
-    //треба, аби Тарас пояснив, як сформувався код з кольором за допомогою циклу
 
     function getRandomColor() {
         const letters = '0123456789ABCDEF';
