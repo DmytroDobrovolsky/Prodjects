@@ -1,0 +1,45 @@
+body{
+
+margin: 0;
+padding: 0;
+
+}
+
+.mainButton{
+
+    height: 55px;
+    width: 55px;
+    color: aqua;
+    background-color: rgba(172, 122, 56, 0.666);
+    padding: 20px;
+    display:flex;
+    border: 0;
+    
+}
+
+.mainButtonClick {
+
+  height: 85px;
+  width: 55px;
+  color: aqua;
+  background-color: rgba(172, 122, 56, 0.666);
+  padding: 20px;
+  display:flex;
+  border: 0;
+  
+
+}
+
+.mainContainer{
+
+    width: 275px;
+    align-items: center ;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  display: flex;
+  margin-inline: auto ;
+  margin-top: 20px ;
+
+
+
+}
