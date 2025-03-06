@@ -1,75 +1,45 @@
 body {
-width: 100%;
-height: 100%;
-margin: 0;
-padding: 0;
-background-image: url('img/background.jpg');
-background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.mainContainer{
+.mainContainer {
 
-    width: 80%;
-    align-items: center ;
-  justify-content: space-around;
-  display: flex;
-  margin-inline: auto ;
-  margin-top: 30% ;
-
+    justify-content: space-around;
+    display: flex;
+    margin-inline: auto;
+    height: 100%;
+    flex-wrap: nowrap;
 
 
 }
 
-.mainButton1{
 
+.musicBtn {
+
+    margin-right: 60px;
+    margin-top: 28%;
     height: 75px;
     width: 75px;
     padding: 20px;
-    display:flex;
-    background-image: url('img/em.jfif')  ;
     background-size: contain;
     background-repeat: no-repeat;
     background-size: cover;
-background-position: center;
-}
-
-.mainButton2{
-
-    height: 75px;
-    width: 75px;
-    padding: 20px;
-    display:flex;
-    background-image: url('img/il_fullxfull.2879215200_irrs.webp')  ;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-.mainButton3{
-
-    height: 75px;
-    width: 75px;
-    padding: 20px;
-    display:flex;
-    background-image: url('img/gg.jpg')  ;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.mainButton4{
-
-    height: 75px;
-    width: 75px;
-    padding: 20px;
-    display:flex;
-    background-image: url('img/dr-dre-1290596323-hero-promo-0.jpg')  ;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border: 3px solid black;
+}
 
-    
+
+.activeBtn {
+
+    border: 3px solid rgb(77, 9, 225);
+
+
 }

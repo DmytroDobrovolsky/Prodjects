@@ -21,7 +21,7 @@ const getRandArr = getRandomArray(10, 1, 50);
 console.log("task 1:",getRandArr);
 
 
-//Завдання 2 треба, аби Тарас пояснив !!!!
+//Завдання 2 треба
 
 const mode = (arry) => {
 
@@ -94,17 +94,20 @@ const mediana = (array) => {
 
     let sup = 0;
     
+    let result = 0;
+
     array.sort(function(a, b){return a - b});
+
+    console.log(array);
+    
     
     arrayLength = array.length % 2 ;
         
     if(arrayLength === 1){
     
-    array.forEach((item, i) => {
-    
-      sup += array[i];
-    
-    });
+    result = array[Math.floor(array.length/2)];
+        
+     
 }
 
 
@@ -123,14 +126,14 @@ else{
         
 }
 
-const result = sup / array.length;    
+//const result = sup / array.length;    
 
     
     return result;
     
     }
     
-    let arr = [5,7,9,10,8,5,9];
+    let arr = [5,7,9,10,8,7];
     
     const startMd = mediana (arr);
 
