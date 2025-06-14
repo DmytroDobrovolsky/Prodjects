@@ -18,7 +18,7 @@ const createLogIn = (root) => {
 
     root.style.width = "100%";
 
-    root.style.heigth = "100%";
+    root.style.heigth = "100vh";
 
     root.style.justifyContent = "center";
 
@@ -35,30 +35,9 @@ const createLogIn = (root) => {
    
     const header = document.createElement('header');
 
-    header.style.position = "fixed";
-
-    header.style.alignItems = "center";
-
-    header.style.justifyContent = "center";
-
-    header.style.top = '0'; // дізнатись більше інфи , як ми змінили позицію header
-
-    header.style.left = '0';
-
-    header.style.width = '350px';
-
-    header.style.height = '100vh';
-
-    header.style.color = '#333';
-
-    header.style.display = 'flex';
-
-    header.style.flexDirection = 'column';
+        header.classList.add("header");
 
     document.body.appendChild(header);
-
-
-
 
 
     const logInBox = document.createElement("div");
@@ -73,7 +52,7 @@ const createLogIn = (root) => {
 
     logInBox.style.padding = "10px";
 
-    logInBox.style.marginTop = "210px"; // запитати в Тараса , як замінити ці марджини на root.style.width/heigth = 100%
+   logInBox.style.marginTop = "210px"; // запитати в Тараса , як замінити ці марджини на root.style.width/heigth = 100%
 
     logInBox.style.marginBottom = "290px";
 
@@ -135,30 +114,12 @@ const createLogIn = (root) => {
 
     const logIn = document.createElement("a");
 
-    logIn.style.display = "flex";
-
-    logIn.style.justifyContent = "center";
-
     logIn.textContent = "Log In";
 
-    logIn.style.marginLeft = "5px";
-
-    logIn.style.padding = "10px";
-
-    logIn.style.fontSize = "30px";
-
-    logIn.style.textDecoration = "none";
-
-    logIn.style.border = " 2px solid #3674B5";
-
-    logIn.style.borderRadius = "6px";
-
-    logIn.style.backgroundColor = "#D2DAFF";
-
-
-
-
     logIn.href = "logIn.html";
+
+    logIn.classList.add("headerA");
+
 
     header.appendChild(logIn);
 
@@ -167,60 +128,27 @@ const createLogIn = (root) => {
 
     createAcc.textContent = " Create Account";
 
-     createAcc.style.display = "flex";
-
-    createAcc.style.justifyContent = "center";
-
-    createAcc.style.border = " 2px solid #3674B5";
-
-    createAcc.style.borderRadius = "6px";
-
     createAcc.style.marginTop = "30px";
-
-    createAcc.style.marginLeft = "5px";
-
-    createAcc.style.padding = "10px";
-
-    createAcc.style.backgroundColor = "#D2DAFF";
-
-    createAcc.style.fontSize = "30px";
 
     createAcc.href = "createAcc.html";
 
-    createAcc.style.textDecoration = "none";
+    createAcc.classList.add("headerA");
 
     header.appendChild(createAcc);
 
 
     const homePage = document.createElement("a");
 
-     homePage.style.display = "flex";
-
-    homePage.style.justifyContent = "center";
-
-    homePage.style.border = " 2px solid #3674B5";
-
-    homePage.style.padding = "10px";
-
-    homePage.style.borderRadius = "6px";
-
     homePage.style.marginTop = "30px";
-
-    homePage.style.marginLeft = "5px";
-
-    homePage.style.textDecoration = "none";
 
     homePage.textContent = "Home Page";
 
-    homePage.style.fontSize = "30px";
-
-     homePage.style.backgroundColor = "#D2DAFF";
-
-
     homePage.href = "index.html";
 
-    header.appendChild(homePage);
+    homePage.classList.add("headerA");
 
+
+    header.appendChild(homePage);
 
     return root;
 
