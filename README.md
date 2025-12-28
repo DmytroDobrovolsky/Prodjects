@@ -7,4 +7,4 @@
 # demos
 [reactNavigation](https://dmytrodobrovolsky.github.io/reactNavigation/)
 # demos
-[https://dmytrodobrovolsky.github.io/redux/]
+[redux](https://dmytrodobrovolsky.github.io/redux/)
