@@ -8,3 +8,5 @@
 [reactNavigation](https://dmytrodobrovolsky.github.io/reactNavigation/)
 # demos
 [redux](https://dmytrodobrovolsky.github.io/redux/)
+# demos
+[tech-taskOne](https://dmytrodobrovolsky.github.io/tech-taskOne/)
